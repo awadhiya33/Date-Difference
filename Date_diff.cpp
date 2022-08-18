@@ -29,32 +29,32 @@ class solution{
     //date_diff function takes two dates in format(DD-MM-YYYY) and returns the no of days b/w two dates.
     long long int date_diff(string start_date, string end_date){
 
-          int day1=str_to_int(start_date,0,2);
+        int day1=str_to_int(start_date,0,2);
 	    int month1=str_to_int(start_date,3,2);
 	    int year1=str_to_int(start_date,6,4);
 
-          int day2=str_to_int(end_date,0,2);
+        int day2=str_to_int(end_date,0,2);
 	    int month2=str_to_int(end_date,3,2);
 	    int year2=str_to_int(end_date,6,4);
 
         int m_days[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-	  // Calculate the total number of days for start_date
+	    // Calculate the total number of days for start_date
         int n1 = year1 * 365;
         n1=n1+day1;
         for (int i = 0; i < month1 - 1; i++){
             n1 =n1+ m_days[i];
         }
-	  // count the number of leap years till the start_date year and add the count in total number of days for start_date
+	    // count the number of leap years till the start_date year and add the count in total number of days for start_date
         n1 =n1+ count_leap_years(month1, year1);
 
-	  // Calculate the total number of days for end_date
+	    // Calculate the total number of days for end_date
         int n2 = year2 * 365;
         n2=n2+day2;
         for (int i = 0; i < month2 - 1; i++){
             n2 =n2+ m_days[i];
         }
-	  // count the number of leap years till the end_date year and add the count in total number of days for end_date
+	    // count the number of leap years till the end_date year and add the count in total number of days for end_date
         n2 =n2+ count_leap_years(month2, year2);
 
         // returning absolute value
