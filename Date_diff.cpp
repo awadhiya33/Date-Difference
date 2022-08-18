@@ -57,7 +57,7 @@ class solution{
 	// count the number of leap years till the end_date year and add the count in total number of days for end_date
         n2 =n2+ count_leap_years(month2, year2);
 
-      // returning absolute value
+        // returning absolute value
         return (n2>n1 ? n2-n1 : n1-n2);
 }
 
