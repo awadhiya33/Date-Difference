@@ -5,7 +5,7 @@ class solution{
     public:
     //function to calculate no of leap years
     int count_leap_years(int month, int year){
-        if (month < 3){
+        if (month <= 2){
             year--;
         }
             int count;
